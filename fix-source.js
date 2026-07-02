@@ -1,0 +1,1 @@
+const {PrismaClient} = require('@prisma/client'); const p = new PrismaClient(); p.source.deleteMany({where:{name:''}}).then(r=>console.log('Удалено:',r.count)).catch(e=>console.error(e.message)).finally(()=>p.$disconnect());

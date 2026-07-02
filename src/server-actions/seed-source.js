@@ -1,0 +1,6 @@
+const {PrismaClient} = require('@prisma/client');
+const p = new PrismaClient();
+p.source.create({data:{name:'Профи'}})
+.then(r=>console.log('OK',r.name))
+.catch(e=>console.error(e))
+.finally(()=>p.$disconnect());

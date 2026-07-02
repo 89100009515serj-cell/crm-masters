@@ -1,0 +1,1 @@
+const {PrismaClient} = require('@prisma/client'); const p = new PrismaClient(); p.serviceType.create({data:{name:'Ремонт окон'}}).then(r=>console.log('OK',r.name)).catch(e=>console.error(e.message)).finally(()=>p.$disconnect());

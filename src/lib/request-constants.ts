@@ -1,0 +1,1 @@
+import type { RequestStatus } from '@prisma/client'; export const ACTIVE_STATUSES: RequestStatus[] = ['NEW', 'ASSIGNED', 'ACCEPTED', 'ON_SITE']; export const ARCHIVE_STATUSES: RequestStatus[] = ['COMPLETED', 'CANCELLED']; export type RequestsScope = 'active' | 'archive'; export type SortKey = 'scheduledAt' | 'totalReceipt' | 'companyProfit';

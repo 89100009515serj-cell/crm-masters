@@ -1,0 +1,1 @@
+const {PrismaClient} = require('@prisma/client'); const p = new PrismaClient(); p.notification.deleteMany().then(()=>p.rescheduleLog.deleteMany()).then(()=>p.request.deleteMany()).then(r=>console.log('OK')).catch(e=>console.error(e.message)).finally(()=>p.$disconnect());

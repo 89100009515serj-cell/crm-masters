@@ -1,0 +1,1 @@
+const {PrismaClient} = require('@prisma/client'); const p = new PrismaClient(); p.serviceType.deleteMany({where:{name:{in:['Ремонт стиральной машины','Ремонт холодильника','Установка кондиционера','Сантехника']}}}).then(r=>console.log('Удалено:',r.count)).catch(e=>console.error(e.message)).finally(()=>p.$disconnect());
